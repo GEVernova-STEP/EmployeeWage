@@ -57,6 +57,28 @@ class EmployeeManager {
 
         return emp;
     }
+
+    /**
+     * Delete employee by ID
+     * @param {number} id
+     */
+    deleteEmployee(id) {
+
+        const index = employees.findIndex(emp => emp.id === id);
+
+        if (index === -1) {
+            throw new Error("Employee not found");
+        }
+
+        return employees.splice(index, 1)[0];
+    }
+
+    /**
+     * Get all employees
+     */
+    getAllEmployees() {
+        return employees;
+    }
 }
 
 module.exports = EmployeeManager;

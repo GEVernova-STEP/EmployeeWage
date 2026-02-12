@@ -26,6 +26,12 @@ try {
 
     console.log("\nAfter Salary Update:");
     console.log(manager.getEmployeeById(2));
+
+    // Delete Employee
+    manager.deleteEmployee(1);
+
+    console.log("\nAfter Delete ID 1:");
+    console.log(manager.getAllEmployees());
     
 } catch (error) {
 
