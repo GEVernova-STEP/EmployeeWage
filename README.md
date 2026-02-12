@@ -1,4 +1,4 @@
-# Employee Wage Management System (JavaScript)
+# Employee Wage Management System
 
 ## Project Overview
 
