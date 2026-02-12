@@ -32,6 +32,31 @@ class EmployeeManager {
     getEmployeeById(id) {
         return employees.find(emp => emp.id === id);
     }
+
+    /**
+     * Update employee details
+     * @param {number} id
+     * @param {object} updatedData
+     */
+    updateEmployee(id, updatedData) {
+
+        const emp = this.getEmployeeById(id);
+
+        if (!emp) {
+            throw new Error("Employee not found");
+        }
+
+        // Update only provided fields
+        if (updatedData.name !== undefined) {
+            emp.name = updatedData.name;
+        }
+
+        if (updatedData.salary !== undefined) {
+            emp.salary = updatedData.salary;
+        }
+
+        return emp;
+    }
 }
 
 module.exports = EmployeeManager;

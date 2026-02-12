@@ -20,6 +20,12 @@ try {
     // Get employee by ID
     console.log("\nEmployee with ID 2:");
     console.log(manager.getEmployeeById(2));
+
+    // Update employee details
+    manager.updateEmployee(2, { salary: 65000 });
+
+    console.log("\nAfter Salary Update:");
+    console.log(manager.getEmployeeById(2));
     
 } catch (error) {
 
